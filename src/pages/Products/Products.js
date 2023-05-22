@@ -12,6 +12,8 @@ const Products = () => {
     (state) => state.products
   );
 
+  console.log(allProducts);
+
   const { page } = useSelector((state) => state.pagination);
   const [pageCount, setPageCount] = useState(0);
   const [name, setName] = useState("");
@@ -39,9 +41,9 @@ const Products = () => {
     let currentPage = data.selected + 1;
     dispatch(setPage(currentPage));
   };
-
   return (
-    <div className="p-5">
+    <section className="content">
+      <h1>Products</h1>
       {loading ? (
         <SkeletonLoading />
       ) : (
@@ -51,7 +53,7 @@ const Products = () => {
       )}
 
       <Paginate pageCount={pageCount} handlePageClick={handlePageClick} />
-    </div>
+    </section>
   );
 };
 

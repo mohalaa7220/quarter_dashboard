@@ -34,6 +34,7 @@ const ProductSlice = createSlice({
   name: "product",
   initialState: {
     error: null,
+    loadingAdd: false,
     loading: false,
     message: null,
     allProducts: [],

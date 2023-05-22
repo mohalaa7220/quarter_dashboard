@@ -1,7 +1,3 @@
-.form-product {
-    padding-block: 7rem;
-}
-
 .form-product input:not(.form-control, [type="checkbox"]),
 .form-product textarea {
     background-color: #fff;

@@ -4,7 +4,7 @@ import { addProduct } from "../../RTK/slices/productSlice";
 import "./style.css";
 import { toast } from "react-toastify";
 const AddProduct = () => {
-  const { loading, message } = useSelector((state) => state.products);
+  const { loadingAdd, message } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   const [product, setProduct] = useState({
@@ -73,9 +73,10 @@ const AddProduct = () => {
       toast.success(`${message}`);
     }
   }, [message]);
-
+  console.log(loadingAdd);
   return (
     <section className="content">
+      <h1>Add Product</h1>
       <form onSubmit={handleAddProduct} className="form-product">
         <div className="row">
           <div className="col-md-6">
@@ -190,7 +191,7 @@ const AddProduct = () => {
             ></textarea>
           </div>
           <button
-            className={loading ? "btn2 btn_loading " : "btn2  btn-block"}
+            className={loadingAdd ? "btn2 btn_loading " : "btn2  btn-block"}
             type="submit"
           >
             Add Product

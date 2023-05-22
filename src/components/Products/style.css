@@ -2,6 +2,8 @@
     background-color: rgb(255, 255, 255);
     border: none;
     transition: all .3s linear;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    color: inherit;
 }
 
 .card_product .img {
@@ -18,4 +20,48 @@
 .card_product:hover img {
     transform: scale(1.1);
     filter: brightness(1.15);
+}
+
+.card_product .card-title {
+    font-weight: 600;
+}
+
+.card_product .card-text {
+    line-height: 1.7;
+    color: var(--gray);
+}
+
+.created {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: var(--gray2);
+    font-weight: 600;
+}
+
+.created svg {
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+.card-body {
+    padding-left: 1.5rem;
+}
+
+.status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.status.rent {
+    background-color: #62ab14;
+}
+
+.status.sale {
+    background-color: #FF5A3C;
 }

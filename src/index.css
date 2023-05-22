@@ -10,7 +10,7 @@
     --transparent-color2: #c60122;
     --trans-color2: #ad1f36;
     --list-color: #F0F5F8;
-    --main-color: #4361ee;
+    --main-color: #FF5A3C;
 }
 
 ul,
@@ -100,4 +100,11 @@ main {
 
 .pt-7 {
     padding: 7rem 0;
+}
+
+.content {
+    background-color: #fff;
+    margin-block: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
 }
