@@ -6,6 +6,7 @@ import Products from "./pages/Products/Products";
 import AddProduct from "./pages/Products/AddProduct";
 import Login from "./pages/Auth/Login";
 import ProductDetails from "./pages/Products/ProductDetails";
+import EditProduct from "./pages/Products/EditProduct";
 const App = () => {
   return (
     <Router>
@@ -15,7 +16,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/add_product" element={<AddProduct />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/products/:productId" element={<ProductDetails />} />
+          <Route path="/products/:productId/edit" element={<EditProduct />} />
         </Routes>
       </RootLayout>
     </Router>

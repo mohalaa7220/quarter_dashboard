@@ -35,7 +35,7 @@ const Products = () => {
       dispatch(fetchProducts());
     }
     setPageCount(calculatePageCount(count));
-  }, [page, count, dispatch, name, state]);
+  }, [page, count, dispatch]);
 
   const handlePageClick = (data) => {
     let currentPage = data.selected + 1;
