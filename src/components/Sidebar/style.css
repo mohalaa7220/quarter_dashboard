@@ -1,0 +1,60 @@
+/* ---------- start sidebar ---------------*/
+
+.css-16jkw2k>.ps-menu-button {
+    color: #595959 !important;
+}
+
+.sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--width-sidebar)!important;
+    min-width: var(--width-sidebar)!important;
+    z-index: 100;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 50px 0 rgb(46 56 220 / 20%);
+    background-color: var(--light);
+}
+
+.css-dip3t8 {
+    background-color: var(--light);
+}
+
+.sidebar.close {
+    width: 78px !important;
+    min-width: 78px !important;
+}
+
+.sidebar .image {
+    text-align: center;
+    padding-block: 27px 48px;
+}
+
+.sidebar img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    .sidebar {
+        display: none;
+        animation: opacity .5s linear;
+    }
+    .sidebar.close {
+        width: auto !important;
+        min-width: auto !important;
+        display: block !important;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}

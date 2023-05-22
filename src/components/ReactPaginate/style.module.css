@@ -1,0 +1,38 @@
+/* ========== Pagination ==========*/
+
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-item {
+    margin-left: 10px;
+}
+
+.page-item:last-child .page-link,
+.page-item:first-child .page-link {
+    border-radius: 100%;
+}
+
+.page-item .page-link {
+    height: 50px;
+    width: 50px;
+    line-height: 46px;
+    border: 2px solid #ededed;
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    border-radius: 100%;
+    padding: 0;
+    color: var(--paragraph-color);
+    font-weight: 700;
+}
+
+.page-item .page-link:hover {
+    background-color: var(--main-color);
+    color: var(--sec-bag);
+}
+
+.active_pagination {
+    background-color: var(--main-color);
+    color: var(--sec-bag) !important;
+}

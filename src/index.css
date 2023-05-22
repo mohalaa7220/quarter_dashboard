@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+:root {
+    --width-sidebar: 250px;
+    --light: #f9f8f8;
+    --gray: #737B8B;
+    --gray2: #49505d;
+    --main-font: 'Cairo', sans-serif;
+    --transparent-color: #216fedb9;
+    --trans-color: rgb(40, 57, 131);
+    --transparent-color2: #c60122;
+    --trans-color2: #ad1f36;
+    --list-color: #F0F5F8;
+    --main-color: #4361ee;
+}
+
+ul,
+li {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #EDF2F6;
+    font-family: var(--main-font);
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    left: var(--width-sidebar);
+    width: calc(100% - var(--width-sidebar));
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.sidebar.close~main {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.navbar {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1rem 16px;
+    border-radius: 23px;
+    padding-bottom: .25rem;
+}
+
+.btn2 {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    position: relative;
+    transition: all .2s linear;
+    z-index: 1;
+    border: 1px solid var(--main-color);
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff;
+    transition: all .2s linear;
+}
+
+.btn2:hover::after {
+    width: 100%;
+}
+
+.btn2:hover {
+    color: #000 !important;
+}
+
+.btn_loading {
+    opacity: .5;
+    pointer-events: none;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    position: relative;
+    transition: all .2s linear;
+    z-index: 1;
+    border: 1px solid var(--main-color);
+    font-weight: 700;
+}
+
+.pt-7 {
+    padding: 7rem 0;
+}
